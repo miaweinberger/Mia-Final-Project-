@@ -28,12 +28,15 @@ $(function() {
     var neighborhood = $('#neighborhoodFinder').val();
     var results
 
+    console.log('issue:', issue);
+    console.log('neighborhood:', neighborhood);
+
+
     if (issue === null && neighborhood === null) {
       alert('Whoa there! Please select an issue and/or neighborhood.');
-    } else if (issue === "immigration" && neighborhood === "upper west side") {
+    } else if (issue[0] === "immigration" && neighborhood[0] === "upper west side") {
       console.log('immigration march at columbus circle');
-    }
-      else {
+    } else {
       console.log('issue:', issue);
       console.log('neighborhood:', neighborhood);
     }
@@ -49,9 +52,20 @@ $(function() {
       // create task and send it to firebase
     var newProtest = dbReferenceProtests.push();
 
+    // capture neighborhoods selected
+    // capture issues selected
+
     console.log('made it here');
     newProtest.set({
-      name: "march"
+      name: "f trump",
+      issue: {
+        immigration: true,
+        womensRights: true
+      },
+      neighborhoods: {
+        bedstuy: true,
+        upperEastSide: true
+      }
     });
 
   }
