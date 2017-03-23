@@ -27,16 +27,20 @@ nav {
 
 .navbar-DTP {
   color: #eee;
-  font-family: "Anton", sans-serif;
+  font-family: "anton", sans-serif;
+  font-weight: 400;
+  /*font-family: 'nixie one', cursive;*/
   font-size: 2.2em;
   margin-left: 10px;
   height: 100%;
 }
 
 .navbar-add-event {
-  font-family: "News Cycle", sans-serif;
+  font-family: "oswald", sans-serif;
+  font-weight: 200;
+  /*font-family: 'nixie one', cursive;*/
   color: #eee;
-  font-size: 1.6em;
+  font-size: 1.4em;
   float: right;
   margin-right: 1rem;
   /*margin-top: 20px;*/
@@ -47,7 +51,7 @@ nav {
   align-items: center; 
 }
 .hero {
-  padding-top: 50px;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -71,7 +75,9 @@ h2 {
 }
 
 p {
-  font-family: 'News Cycle', sans-serif;
+  /*font-family: 'News Cycle', sans-serif;*/
+  font-family: 'oswald', sans-serif;
+  font-weight: 200;
   font-size: 1.3em;
   text-align: center;
 }
@@ -81,39 +87,103 @@ p {
 }
 
 .filters {
-  /*display: flex;
-  flex-direction: row;
-  justify-content: space-between;*/
   padding-top: 1rem;
+
 }
 
+/*.issue, .neighborhood {
+  color: #333;
+  font-family: 'anton', sans-serif;
+}*/
 
 .btn {
   background-color: white;
   /*color: #ff008d;*/
-  color: #333;
-  font-family: 'anton', sans-serif;
+  color: #333;/*
+  font-family: 'anton', sans-serif;*/
+  /*font-family: "slabo", serif;*//*
+  font-family: 'nixie one', cursive;*/
+  font-family: 'oswald', sans-serif;
+  font-weight: 200;
   font-size: 1.3em;
   border: 1px solid #eee;
   margin-right: 1rem;
+  padding-right: 0;
 }
 
+.dropup {
+  font-family: "oswald", sans-serif;
+}
 
 .btn:hover {
   background-color: #333;
   color: #eee;
 }
 
+.btn:active {
+  background-color: pink;
+}
 
+.selectpicker {
+  color: black;
+}
 
 .btn-lg {
   margin-top: 1em;
   color: #23F4FF;
   font-family: "Bevan", cursive;
   margin-right: 0;
+  padding-right: 16px;
 
 }
 
-.panel-heading {
-  background-color:  #23F4FF;
+#results {
+  color: black;
+}
+
+/*Add An Event page styles */
+
+/*#upcoming-event {
+  padding-top: 7rem;
+}*/
+
+.chitchat {
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+/*.add-protest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}*/
+
+label.col-md-3 {
+  font-family: "News Cycle", sans-serif;
+  font-size: 1.5em;
+  font-weight: lighter; 
+  padding-right: 0;
+}
+
+div.col-md-6 {
+  padding-left: 0;
+}
+
+input {
+  padding-bottom: 0;
+}
+
+/*Admin page styles*/
+
+.admin-title {
+  padding-top: 2em;
+}
+
+#addComment{
+  height: 7rem;
+  padding-bottom: 5rem;
 }

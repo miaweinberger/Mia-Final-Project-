@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DTP NYC | Home</title>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-select.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Bevan|News+Cycle:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Bevan|News+Cycle:400,700|Nixie+One|Oswald:200,300,400,500,600,700" " rel="stylesheet">
   </head>
 
   <body>
     <div class="container-fluid">
       <div class="row">
         <nav class="navbar navbar-fixed-top">
-          <a class="navbar-DTP col-md-3" href="#">DTP NYC</a>
-          <a class="navbar-add-event col-md-3 col-md-offset-7" href ="#">add an event</a>
+          <a class="navbar-DTP col-md-3" href="index.html">DTP NYC</a>
+          <a class="navbar-add-event col-md-3 col-md-offset-7" href ="add-event.html">submit a protest</a>
+          <a class="navbar-admin col-md-1" href ="admin.html">*</a>
         </nav>
       </div>
     </div>
@@ -28,55 +30,23 @@
           <p class="p-bold">Use the filters below to find the best one for you. See you out there.</p>
         </div>
 
-        <div class ="filters">
-            <div class="btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              issue<span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Immigration</a></li>
-                <li><a href="#">Women's Rights</a></li>
-                <li><a href="#">The Environment</a></li>
-              </ul>
-            </div>
+        <div class="filters">
+            <select class="selectpicker dropup" id="issueFinder" multiple title="select an issue">
+              <option>immigration</option>
+              <option>women's rights</option>
+              <option>health care</option>
+            </select>
 
-            <div class="btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              neighborhood<span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Midtown West</a></li>
-                <li><a href="#">Midtown East</a></li>
-                <li><a href="#">Brooklyn</a></li>
-              </ul>
-            </div>
-
-            <!-- <div class="dropdown">
-              <button id='dLabel' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>neighborhood
-              <span class='caret'></span>
-              </button>
-              <ul class='dropdown-menu' aria-labelledby='dLabel'>
-                <li><a href="#">Midtown West</a></li>
-                <li><a href="#">Midtown East</a></li>
-                <li><a href="#">Brooklyn</a></li>
-              </ul>
-            </div> -->
-
-            <div class="btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              date<span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Midtown West</a></li>
-                <li><a href="#">Midtown East</a></li>
-                <li><a href="#">Brooklyn</a></li>
-              </ul>
-            </div>
+            <select class="selectpicker dropup" id="neighborhoodFinder" multiple title="select a neighborhood">
+              <option>upper west side</option>
+              <option>upper east side</option>
+              <option>brooklyn</option>
+            </select>
         </div>
-        <a class="btn btn-primary btn-lg" href="#" role="button">find my protest</a>
+        <a class="btn btn-primary btn-lg" id="finder" href="#" role="button">find my protest</a>
+        <div id='results'></div>
       </div>
     </div>
-      
 
 
       
@@ -84,5 +54,8 @@
 
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
