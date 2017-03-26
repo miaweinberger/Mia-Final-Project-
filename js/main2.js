@@ -22,26 +22,30 @@ $(function() {
   $('#finder').click(findProtest);
   $('#createProtest').submit(createProtest);
 
-  function findProtest() {
-    //1. get values from selects
-    var issue = $('#issueFinder').val();
-    var neighborhood = $('#neighborhoodFinder').val();
-    var results
+  // function findProtest() {
+  //   //1. get values from selects
+  //   var issue = $('#issueFinder').val();
+  //   var neighborhood = $('#neighborhoodFinder').val();
 
-    console.log('issue:', issue);
-    console.log('neighborhood:', neighborhood);
+
+  //   console.log('issue:', issue);
+  //   console.log('neighborhood:', neighborhood);
 
 
     if (issue === null && neighborhood === null) {
       alert('Whoa there! Please select an issue and/or neighborhood.');
-    } else if (issue[0] === "immigration" && neighborhood[0] === "upper west side") {
-      console.log('immigration march at columbus circle');
+    } else if (issue[0] === "immigration" && neighborhood[0] === "financial district") {
+      // console.log('City of Refuge');
+      // publishResults('march 28: city of refuge');
     } else {
       console.log('issue:', issue);
       console.log('neighborhood:', neighborhood);
     }
   }
-
+  // function publishResults() {
+  // var message; 
+  // $("#results").text(message)
+}
   function createProtest(event) {
     event.preventDefault();
 
@@ -64,7 +68,8 @@ $(function() {
       },
       neighborhoods: {
         bedstuy: true,
-        upperEastSide: true
+        upperEastSide: true,
+        morningsideHeights: true
       }
     });
 
