@@ -19,7 +19,8 @@ var protests = [
 $('#finder').click(showResults);
 
 function showResults() {
-$('#results').append(protests[0].name);
+// $('#results').append(protests[0].name);
+$('.header').html(protests[0].name);
 }
 
 
