@@ -12,9 +12,9 @@ nav {
 
 .navbar.navbar-fixed-top {
   background-color: #23F4FF;
-  display: flex;
+/*  display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-content: flex-end;*/
 }
 
 
@@ -29,22 +29,31 @@ nav {
 }
 
 .navbar-add-event {
-  font-family: "oswald", sans-serif;
+  font-family: "bevan", cursive;
   font-weight: 200;
   /*font-family: 'nixie one', cursive;*/
   color: #eee;
-  font-size: 1.4em;
+  font-size: 1.1em;
   float: right;
   margin-right: 1rem;
-  /*margin-top: 20px;*/
+  margin-top: 20px;
 }
+
+.navbar-admin {
+  float: right;
+}
+
+#submit-on-add-page {
+  font-family: 'news cycle', sans-serif;
+}
+
 .row {
   display: flex;
   flex-direction: column;
   align-items: center; 
 }
 .hero {
-  padding-top: 3rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -58,18 +67,29 @@ h1 {
   margin-bottom: 0px;
 }
 
-h2 {
+
+@media only screen and (max-width: 620px) {
+  h1 {
+    font-size: 12em;
+  }
+}
+
+
+@media only screen and (max-width: 540px) {
+  h1 {
+    font-size: 8.3em;
+  }
+}
+
+h2, h3 {
   font-family: "Bevan", cursive;
   margin-top: 0px;
-  /*color: #ff008d;*/
-  /*color: white;*/
-  /*color: #07AAB2;*/
   color: #23F4FF;
 }
 
 p {
-  /*font-family: 'News Cycle', sans-serif;*/
-  font-family: 'oswald', sans-serif;
+  font-family: 'News Cycle', sans-serif;
+  /*font-family: 'oswald', sans-serif;*/
   /*font-family: 'nixie one', cursive;*/
   font-weight: 200;
   font-size: 1.3em;
@@ -82,7 +102,19 @@ p {
 
 .filters {
   padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
 
+}
+
+@media only screen and (max-width: 460px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .dropup {
+    margin-bottom: 8px;
+  }
 }
 
 /*.issue, .neighborhood {
@@ -97,7 +129,7 @@ p {
   font-family: 'anton', sans-serif;*/
   /*font-family: "slabo", serif;*//*
   font-family: 'nixie one', cursive;*/
-  font-family: 'oswald', sans-serif;
+  /*font-family: 'oswald', sans-serif;*/
   font-weight: 200;
   font-size: 1.3em;
   border: 1px solid #eee;
@@ -107,6 +139,10 @@ p {
 
 .dropup {
   font-family: "oswald", sans-serif;
+}
+
+#issueFinder {
+  font-size: 2em;
 }
 
 #results {
@@ -183,6 +219,18 @@ p {
   padding-bottom: 1rem;
 }
 
+@media only screen and (max-width: 520px) {
+  .chitchat {
+    padding-top: 4rem;
+    align-items: flex-start;
+    padding-bottom: .3rem;
+  }
+
+  #upcoming-event, #add-here {
+    font-size: 1.6em;
+  }
+}
+
 /*.add-protest {
   display: flex;
   flex-direction: column;
@@ -194,6 +242,7 @@ label.col-md-3 {
   font-size: 1.5em;
   font-weight: lighter; 
   padding-right: 0;
+  padding-left: 0;
 }
 
 div.col-md-6 {
@@ -204,13 +253,38 @@ input {
   padding-bottom: 0;
 }
 
+#submit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#addComment{
+  height: 7rem;
+  padding-bottom: 5rem;
+}
+
+#submit-protest {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  color: #23F4FF;
+  font-family: "Bevan", cursive;
+  font-size: 1.3em;
+  padding-right: 2px;
+  padding-left: 2px;
+  margin-right: 15px;
+
+}
+
 /*Admin page styles*/
 
 .admin-title {
   padding-top: 2em;
 }
 
-#addComment{
-  height: 7rem;
-  padding-bottom: 5rem;
+#thanks {
+  font-size: 3em;
+  padding-top: 1rem;
 }
