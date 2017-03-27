@@ -29,6 +29,10 @@ nav {
   margin-top: 5px;
 }
 
+a.navbar-DTP:hover {
+  color: #333;
+}
+
 .navbar-add-event {
   font-family: "bevan", cursive;
   font-weight: 200;
@@ -40,6 +44,10 @@ nav {
   margin-top: 20px;
   padding-right: 20px;
   vertical-align: baseline;
+}
+
+.navbar-add-event:hover {
+  color: #333;
 }
 
 .navbar-admin {
@@ -108,6 +116,10 @@ p {
   display: flex;
   flex-direction: row;
 
+}
+
+.filter-option {
+  font-family: 'oswald', sans-serif;
 }
 
 @media only screen and (max-width: 460px) {
@@ -279,6 +291,11 @@ input {
   padding-left: 2px;
   margin-right: 15px;
 
+}
+
+#submit-protest:hover {
+  background-color: #333;
+  color: #eee;
 }
 
 /*Admin page styles*/
