@@ -12,17 +12,22 @@ var protests = [
     name: 'Cesar Chavez RALLY for New York State Farmworker Rights',
     neighborhood: 'lower manhattan',
     issue: 'immigration', 
-    date: 'march 28 (tuesday)',
+    date: 'march 30 (thursday)',
     link: 'https://www.facebook.com/events/1381782628547228/',
     tags: ['immigration', 'lowerManhattan']
   }, {
     name: 'ACT UP: 30th Anniversary March and Rally',
     neighborhood: 'greenwich village', 
     issue: 'health care',
-    date: 'march 28 (tuesday)',
+    date: 'march 30 (thursday)',
     link: 'https://www.facebook.com/events/204115296734664/',
     tags: ['greenwichVillage', 'immigration']
-  } 
+  }, {
+    name: 'Latino Rally',
+    neighborhood: 'tribeca',
+    issue: 'immigration'
+
+  }
 ]
 
 $('#finder').click(displayCards);
@@ -43,10 +48,8 @@ function displayCards() {
    var currentNeighborhood = protests[index].neighborhood;
    var currentIssue = protests[index].issue;
 
-   var chosenIssue = '';
-   var chosenNeighborhood = '';
-
-   $('#issueFinder').val();
+   var chosenIssue = $('#issueFinder').val();
+   var chosenNeighborhood = $('#neighborhoodFinder').val();
 
    
    var currentTagArray = protests[index].tags;
