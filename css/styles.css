@@ -11,19 +11,12 @@ nav {
 }
 
 .navbar.navbar-fixed-top {
-  /*background-color: #242625;*/
-  /*background-color: #333;*/
-  /*background-color: #ff008d;*/
   background-color: #23F4FF;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
 
-/*.navbar-header {
-  width: 100%;
-  height: 100%;
-}*/
 
 .navbar-DTP {
   color: #eee;
@@ -117,7 +110,7 @@ p {
 }
 
 #results {
-  font-family: "oswald", sans-serif;
+   margin-bottom: 30px;
 }
 
 .btn:hover {
@@ -125,16 +118,14 @@ p {
   color: #eee;
 }
 
-.btn:active {
-  background-color: pink;
-}
 
 .selectpicker {
   color: black;
 }
 
 .btn-lg {
-  margin-top: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: #23F4FF;
   font-family: "Bevan", cursive;
   margin-right: 0;
@@ -142,13 +133,41 @@ p {
 
 }
 
-/*#results {
-  color: black;
-  height: 100px;
-  width: 100px;
-  background-color: green;
-}*/
+.btn-lg:visited {
+  background-color: white;
+  color: #23F4FF;
+  border-color: #eee;
+}
 
+.btn-lg:hover {
+  background-color: #333;
+  color: #eee;
+
+}
+
+.ui.card>.content>.header{
+  /*font-family: "bevan", cursive;*/
+  font-family: 'oswald', sans-serif;
+  font-weight: 200;
+  color: #333;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  font-family: 'oswald', sans-serif;
+
+}
+
+.date {
+  font-size: 1.3em;
+}
+
+.meta>a {
+  font-size: 1em;
+  text-decoration: underline;
+
+}
 /*Add An Event page styles */
 
 /*#upcoming-event {

@@ -42,10 +42,10 @@ function displayCards() {
    var currentLink = protests[index].link;
    var currentTagArray = protests[index].tags;
    var currentTags;
-   
-   currentTagArray.forEach(function(item, index) {
+
+   // currentTagArray.forEach(function(item, index) {
     
-   });
+   // });
    // var currentLink = $('.link')[index];
    // console.log('X: ', item.name);
    // $(currentHeader).html(item.name);

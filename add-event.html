@@ -12,10 +12,10 @@
   </head>
 <body>
   <div class="container-fluid">
-    <<div class="row">
+    <div class="row">
         <nav class="navbar navbar-fixed-top">
-          <a class="navbar-DTP col-md-3" href="index.html">DTP NYC</a>
-          <a class="navbar-add-event col-md-3 col-md-offset-7" href ="add-event.html">submit a protest</a>
+          <a class="navbar-DTP col-xs-6 col-sm-3 col-md-3 col-lg-3" href="index.html">DTP NYC</a>
+          <a class="navbar-add-event col-md-3 col-md-offset-7 col-sm-3 col-sm-offset-7" href ="add-event.html">submit a protest</a>
           <a class="navbar-admin col-md-1" href ="admin.html">*</a>
         </nav>
       </div>
@@ -32,19 +32,19 @@
 
   <div class='container'>
     <div class='row'>
-      <div class='add-protest col-md-8 col-md-offset-2'>
-        <form action="http://formspree.io/<!-- kareem+formspree@getuserwise.com -->" method="POST" class="form-horizontal" action="#" method="post">
+      <div class='add-protest col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1'>
+        <form action="http://formspree.io/mia.e.weinberger@gmail.com" method="POST" class="form-horizontal">
           <div class="form-group">
             <label for="protestName" class="col-md-3">name of protest:</label>
               <div class="col-md-6">
-                 <input type="text" class="form-control" id="protestName" placeholder="[enter name]">
+                 <input type="text" class="form-control" name= "protestName" id="protestName" placeholder="[enter name]">
               </div>
           </div>
 
           <div class="form-group">
             <label for="protestLink" class="col-md-3">link to protest:</label>
               <div class="col-md-6">
-                 <input type="text" class="form-control" id="protestLink" placeholder="[paste link to facebook page, website, etc.]">
+                 <input type="text" class="form-control" name ="protestLink" id="protestLink" placeholder="[paste link to facebook page, website, etc.]">
               </div>
           </div>
 
@@ -60,11 +60,13 @@
           <div class="form-group">
             <label for="comments" class="col-md-3">comments:</label>
               <div class="col-md-6">
-                 <input type="text" class="form-control" id="addComment" placeholder="[should you want to tell us more]">
+                 <input type="text" class="form-control" name="addComment" id="addComment" placeholder="[should you want to tell us more]">
               </div>
           </div>
+
+          <button type="submit">submit protest</button>
         </form>
-        <a class="btn btn-primary btn-lg col-md-4 col-md-offset-2" href="#" role="button">submit protest</a>
+        
         </div>
       </div>
     </div> 
