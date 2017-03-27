@@ -6,20 +6,22 @@ var protests = [
     neighborhood: 'financial district', 
     issue: 'immigration',
     date: 'march 28 (tuesday)',
-    link: 'https://www.facebook.com/events/1899030313649428/'
+    link: 'https://www.facebook.com/events/1899030313649428/',
+    tags: ['financialDistrict', 'immigration']
   } , {
     name: 'Cesar Chavez RALLY for New York State Farmworker Rights',
     neighborhood: 'lower manhattan',
-    issue: 'immigration',
-    tags: ['immigration', 'lowerManhattan'],  
+    issue: 'immigration', 
     date: 'march 28 (tuesday)',
-    link: 'https://www.facebook.com/events/1381782628547228/'
+    link: 'https://www.facebook.com/events/1381782628547228/',
+    tags: ['immigration', 'lowerManhattan']
   }, {
     name: 'ACT UP: 30th Anniversary March and Rally',
     neighborhood: 'greenwich village', 
     issue: 'health care',
     date: 'march 28 (tuesday)',
-    link: 'https://www.facebook.com/events/204115296734664/'
+    link: 'https://www.facebook.com/events/204115296734664/',
+    tags: ['greenwichVillage', 'immigration']
   } 
 ]
 
@@ -37,20 +39,32 @@ function displayCards() {
    // var currentHeader = $('.header')[index];
    var currentDate = protests[index].date;
    var currentName = protests[index].name;
+   var currentLink = protests[index].link;
    var currentNeighborhood = protests[index].neighborhood;
    var currentIssue = protests[index].issue;
-   var currentLink = protests[index].link;
-   var currentTagArray = protests[index].tags;
-   var currentTags;
 
-   // currentTagArray.forEach(function(item, index) {
-    
-   // });
-   // var currentLink = $('.link')[index];
-   // console.log('X: ', item.name);
-   // $(currentHeader).html(item.name);
-   // $(currentDate).html(item.date);
-   // $(currentLink).html(item.link);
+   var chosenIssue = '';
+   var chosenNeighborhood = '';
+
+   $('#issueFinder').val();
+
+   
+   var currentTagArray = protests[index].tags;
+   var currentTags = '';
+   console.log('currentTagArray: ', currentTagArray);
+
+   if (currentTagArray !== undefined) {
+        currentTagArray.forEach(function (item, index) {
+          currentTags = currentTags + ' ' + item;
+          // Here we see our string as it is bening made.
+          console.log('pass #' + (index + 1) + 'of our concatination: ', currentTags);
+          if (item === chosenIssue &&  item === chosenNeighborhood) {
+
+          }
+        });
+      }
+
+  console.log('here is our big string for protest #' + (index + 1) + ': ', currentTags);
 
    var card = `
       <div class="ui raised card ${currentTags}">
@@ -69,14 +83,11 @@ function displayCards() {
 
    $('#results').append(card);
 
+   // $('.card').not(chosenIssue).hide();
+   // $('.card').not(chosenNeighborhood).hide();
+
   });
 }
 
-
-
-var $grid = $('.grid').isotope({
-  itemSelector: '.element-item',
-  layoutMode: 'fitRows'
-});
 
 });
