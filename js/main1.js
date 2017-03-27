@@ -25,8 +25,10 @@ var protests = [
   }, {
     name: 'Latino Rally',
     neighborhood: 'tribeca',
-    issue: 'immigration'
-
+    issue: 'immigration',
+    date: 'march 31 (friday)',
+    link: 'https://www.facebook.com/events/182226108930804',
+    tags: ['tribeca', 'immigration']
   }
 ]
 
@@ -37,10 +39,10 @@ $('#finder').click(displayCards);
 
 function displayCards() {
   protests.forEach(function(item, index) {
-    console.log(protests[index].name);
-    console.log(protests[index].neighborhood);
-    console.log(protests[index].issue);
-    console.log(protests[index].date);
+    // console.log(protests[index].name);
+    // console.log(protests[index].neighborhood);
+    // console.log(protests[index].issue);
+    // console.log(protests[index].date);
    // var currentHeader = $('.header')[index];
    var currentDate = protests[index].date;
    var currentName = protests[index].name;
@@ -48,8 +50,11 @@ function displayCards() {
    var currentNeighborhood = protests[index].neighborhood;
    var currentIssue = protests[index].issue;
 
-   var chosenIssue = $('#issueFinder').val();
-   var chosenNeighborhood = $('#neighborhoodFinder').val();
+   var chosenIssue = '.' + ($('#issueFinder').val());
+   var chosenNeighborhood = '.' + ($('#neighborhoodFinder').val());
+
+   console.log(chosenIssue);
+   console.log(chosenNeighborhood);
 
    
    var currentTagArray = protests[index].tags;
@@ -86,8 +91,8 @@ function displayCards() {
 
    $('#results').append(card);
 
-   // $('.card').not(chosenIssue).hide();
-   // $('.card').not(chosenNeighborhood).hide();
+   $('.card').not(chosenIssue).hide();
+   $('.card').not(chosenNeighborhood).hide();
 
   });
 }
